@@ -1,0 +1,23 @@
+#!/bin/bash
+# Run comprehensive quality checks
+
+echo "🚀 Running comprehensive code quality checks..."
+
+# Format code first
+echo "1️⃣  Formatting code..."
+./scripts/format.sh
+
+echo ""
+
+# Run linting
+echo "2️⃣  Running linting checks..."
+./scripts/lint.sh
+
+echo ""
+
+# Run tests
+echo "3️⃣  Running tests..."
+cd backend && uv run pytest tests/ -v
+
+echo ""
+echo "🎉 Quality check completed!"

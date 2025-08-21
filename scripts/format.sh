@@ -1,0 +1,14 @@
+#!/bin/bash
+# Format code with isort and black
+
+echo "🔧 Formatting Python code with isort and black..."
+
+# Sort imports
+echo "  📦 Sorting imports with isort..."
+uv run isort backend/
+
+# Format with black
+echo "  🖤 Formatting code with black..."
+uv run black backend/
+
+echo "✅ Code formatting completed!"

@@ -30,6 +30,23 @@ cp .env.example .env
 # Edit .env and set ANTHROPIC_API_KEY=your-key-here
 ```
 
+### Code Quality
+```bash
+# Format code with black and isort
+./scripts/format.sh
+
+# Run linting checks only
+./scripts/lint.sh
+
+# Run comprehensive quality checks (format, lint, test)
+./scripts/quality-check.sh
+
+# Individual commands
+uv run black backend/          # Format with black
+uv run isort backend/          # Sort imports
+uv run flake8 backend/         # Lint with flake8
+```
+
 ## Architecture Overview
 
 This is a RAG (Retrieval-Augmented Generation) chatbot system with the following key components:
